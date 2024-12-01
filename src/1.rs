@@ -2,7 +2,7 @@ use std::collections::HashMap;
 
 use lib::util::file_to_vec;
 
-pub fn main() {
+fn main() {
     let i = file_to_vec("input/1.txt".to_owned()).unwrap();
 
     let (mut f, mut s): (Vec<_>, Vec<_>) = i
