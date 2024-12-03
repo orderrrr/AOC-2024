@@ -55,7 +55,7 @@ fn f(c: (bool, bool), i: &[i32]) -> (bool, bool) {
 fn f2((f, mut c): (bool, Vec<usize>), i: &[(usize, i32)]) -> (bool, Vec<usize>) {
     let (r, t) = mc(i[0].1, i[1].1);
     if !(t && r == f) {
-        c.extend([i[0].0.min(0), i[0].0, i[1].0]);
+        c.extend([0, i[0].0, i[1].0]);
     }
     (f, c)
 }
