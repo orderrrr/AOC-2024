@@ -4,7 +4,7 @@ use regex::Regex;
 
 fn main() -> Result<()> {
     let text = file_to_string("input/3.txt".to_string())?.replace("\n", "");
-    let text_sub = Regex::new(r"(?ms)don't\(\).*?(?:do\(\)|$)")?.replace_all(&text, "yyyy");
+    let text_sub = Regex::new(r"(?ms)don't\(\).*?(?:do\(\)|$)")?.replace_all(&text, "");
 
     let res = find(&text);
     let res2 = find(&text_sub);
